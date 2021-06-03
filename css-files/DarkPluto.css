@@ -1,0 +1,47 @@
+<style>
+
+body{
+	background:rgb(54, 59, 64);
+}
+
+pluto-output{
+	background:rgb(54, 59, 64);
+	color:rgb(184, 191, 198);
+}
+
+
+pluto-output h1,
+pluto-output h2,
+pluto-output h3,
+pluto-output h4,
+pluto-output h5,
+pluto-output h6 {
+	color:rgb(222, 222, 222);
+}
+
+pluto-output div.admonition {
+    background: red;
+}
+
+pluto-output div.admonition.info{
+	background: rgb(60, 60, 60);
+ 	border: 5px solid rgb(25, 25, 25);
+}
+
+pluto-output div.admonition.info .admonition-title {
+    background: rgb(25, 25, 25);
+}
+
+pluto-output.rich_output code{
+    background: rgb(50, 50, 50);
+}
+
+pluto-output hr{
+	border-top: 3px solid rgb(71, 77, 84);
+}
+
+pluto-input.CodeMirror {
+	padding-bottom: 20px;
+}
+
+</style>

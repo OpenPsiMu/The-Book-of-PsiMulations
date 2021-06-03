@@ -1,0 +1,266 @@
+<style>
+
+/* Headers: Vollkorn */
+/* Output text: Alegreya Sans */ 
+/* Code input: JuliaMono */
+
+@import url("https://cdn.jsdelivr.net/npm/fontsource-vollkorn@3.0.3/600.css");
+@import url("https://cdn.jsdelivr.net/npm/fontsource-alegreya-sans@3.0.10/400.css");
+@import url("https://cdn.jsdelivr.net/npm/fontsource-alegreya-sans@3.0.10/500.css");
+@import url("https://cdn.jsdelivr.net/npm/fontsource-alegreya-sans@3.0.10/700.css");
+
+@font-face {
+    font-family: JuliaMono;
+    src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono@0.037/webfonts/JuliaMono-RegularLatin.woff2") format("woff2");
+    font-display: swap;
+    font-weight: 400;
+    unicode-range: U+00-7F; /* Basic Latin characters */
+}
+
+@font-face {
+    font-family: JuliaMono;
+    src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono@0.037/webfonts/JuliaMono-BoldLatin.woff2") format("woff2");
+    font-display: swap;
+    font-weight: 700;
+    unicode-range: U+00-7F; /* Basic Latin characters */
+}
+
+@font-face {
+    font-family: JuliaMono;
+    src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono@0.037/webfonts/JuliaMono-Regular.woff2") format("woff2");
+    font-display: swap;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: JuliaMono;
+    src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono@0.037/webfonts/JuliaMono-Bold.woff2") format("woff2");
+    font-display: swap;
+    font-weight: 700;
+}
+
+/* Fonts for header, text and code inputs */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    color:rgb(222, 222, 222);
+    font-family:"Vollkorn", Arial, sans-serif;
+}
+
+div.text_cell_render {
+    color:rgb(184, 191, 198);
+    font-family:"Alegreya Sans", Arial, sans-serif;
+    font-size: 1em;
+}
+
+div.CodeMirror {
+    font-family:JuliaMono, sans-serif;
+    font-size: 13px;
+}
+
+/* horizontal rule (line-break) */
+.rendered_html hr {
+    border-top: 3px solid rgb(71, 77, 84);
+}
+
+/* Markdown output box */
+.rendered_html p code {
+    padding: 1px 5px;
+    background: rgb(50, 50, 50);
+    color: rgb(184, 191, 198);
+    border-radius: 7.5px;
+    font-size: 14px;
+}
+
+/*Don't need to see jupyter logo, filename, last saved, etc.*/
+div#header-container { display: none; }
+
+/*This prevents scrollable output from having an ugly grey
+shadow around it*/
+div.output.output_scroll {
+    box-shadow: none;
+}
+
+/*Scroll bars*/
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Handle *4
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: #484848;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: #484848; 
+}
+
+
+/*########################*/
+
+
+/* GLOBALS */
+body {background-color: #1e1e1e;}
+a {color: #7587a6;}
+ 
+/* Overall background and notebook attributes */
+div#notebook {
+    background-color: rgb(54, 59, 64); 
+    border-top: none;
+    font-size: 17px;
+}
+
+div#notebook-container {background-color: rgb(54, 59, 64); max-width: 75%; box-shadow: unset;}
+
+
+/* INTRO PAGE */ 
+.toolbar_info, .list_container {color: #c3c3c3;}
+
+/* NOTEBOOK */
+
+/* comment out this line to bring the toolbar back */
+/*div#maintoolbar, div#header {display: none !important;}*/
+
+div.input_prompt {color: rgb(54, 59, 64); font-size: 13px;} /* hiding In[45] */
+div.output_prompt {color: rgb(54, 59, 64); font-size: 13px;} /* hiding Out[45]*/
+
+/* remove the In/Out[45] column */
+div.prompt {
+    width: 0;
+    min-width: 0;
+    padding: 0;
+}
+
+/* Dont know what this stuff is, better not mess with it */
+
+div.output_area pre {font-weight: normal; color: #a7a7a7;}
+div.output_subarea {font-weight: normal; color: #a7a7a7;}
+
+.rendered_html table, .rendered_html th, .rendered_html tr, .rendered_html td {
+  border: 1px  #a7a7a7 solid;
+  color: #a7a7a7;
+}
+div.output_html { font-family: sans-serif; color:rgb(184, 191, 198);}
+table.dataframe tr {border: 1px #a7a7a7;}
+
+div.cell.selected {border-radius: 0px;}
+div.cell.edit_mode {border-radius: 0px; border: thin solid #9b859d;}
+
+
+span.ansiblack {color: #323537;}
+span.ansiblue {color: #afc4db;}
+span.ansigray {color: #838184;}
+span.ansigreen {color: #8f9d6a;}
+span.ansipurple {color: #9b859d;}
+span.ansired {color: #cf6a4c;}
+span.ansiyellow {color: #f9ee98;}
+
+div.output_stderr {background-color: #cf6a4c;}
+div.output_stderr pre {color: #c3c3c3;}
+
+/*---- Syntax highlighting for inside jupyter notebook -----*/
+
+.cm-s-ipython.CodeMirror {background: #304148; color: #f8f8f2;}
+.cm-s-ipython div.CodeMirror-selected {background: #323537 !important;}
+.cm-s-ipython .CodeMirror-gutters {background: #1e1e1e; border-right: 0px;}
+.cm-s-ipython .CodeMirror-linenumber {color: #5f5a60;}
+.cm-s-ipython .CodeMirror-cursor {border-left: 1px solid #838184 !important;}
+
+.cm-s-ipython span.cm-comment {color: #65737E;}
+.cm-s-ipython span.cm-atom {color: #C594C5;}
+.cm-s-ipython span.cm-number {color: #F99157;}
+
+.cm-s-ipython span.cm-property, .cm-s-ipython span.cm-attribute {color: #a5b579;}
+.cm-s-ipython span.cm-keyword {color: #C594C5;}
+.cm-s-ipython span.cm-string {color: #99C794;}
+.cm-s-ipython span.cm-operator {color: #dedede}
+.cm-s-ipython span.cm-builtin {color: #66d9ef;}
+
+.cm-s-ipython span.cm-variable,
+.cm-s-ipython span.cm-variable-2,
+.cm-s-ipython span.cm-variable-3 {color: #f8f8f2;}
+
+.cm-s-ipython span.cm-def {color: #6699CC;}
+.cm-s-ipython span.cm-error {background: #C594C5; color: #f8f8f0;}
+.cm-s-ipython span.cm-bracket {color: #5FB3B3;}
+.cm-s-ipython span.cm-tag {color: #C594C5;}
+.cm-s-ipython span.cm-link {color: #C594C5;}
+
+.cm-s-ipython .CodeMirror-matchingbracket { text-decoration: underline; color: #c3c3c3 !important;}
+
+
+/*----------for html export----------------*/
+
+pre {
+    font-size: 13px;
+    line-height: inherit;
+}
+code, kbd, pre, samp {
+    font-family: JuliaMono;
+}
+
+/* Attributes for the code-input boxes */
+
+div.input_area {
+    border-radius: 4px;
+    border: 1px solid #464b50;
+    background: #304148; 
+    color: #f8f8f2;
+    font-size: 13px;
+}
+
+div.input_area > div.highlight > pre {
+    margin: 0px;
+    border: none;
+    padding: 0px;
+    background: #304148; 
+    color: #f8f8f2;
+}
+
+.MathJax_Display {
+   padding: 20px;
+}
+
+/* Admonition */
+
+.alert-info{
+    background-color: #3c3c3c;
+    border-color: #191919;
+    color: rgb(184, 191, 198);
+    padding-left: 20px;
+    padding-top: 0;
+    border-radius: 10px;
+}
+
+.alert{
+    border: 5px solid;
+}
+
+/* Syntax highlighting */
+
+.highlight .c1 {color: #65737E;} /* comment */
+
+.highlight .mi,
+.highlight .mf {color: #F99157;} /* number literals */
+
+.highlight .k,
+.highlight .kn,
+.highlight .kc,
+.highlight .ow {color: #C594C5;} /* keywords */
+
+.highlight .s1,
+.highlight .s2 {color:#99C794;} /* strings */
+.highlight .o {color: #dedede;} /* operator */
+.highlight .nb {color: #66d9ef} /* builtin func */
+
+.highlight .n,
+.highlight .p,
+.highlight .nn {color: #f8f8f2;} /* variable */
+
+.highlight .nf {color: #6699CC;} /* func definition */
+
+</style>
