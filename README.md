@@ -1,7 +1,5 @@
 ## The Book of PsiMulations
 
----
-
 The one-stop destination for anything computational physics, starting from basic concepts to detailed implementations of mini-projects. The website consists of interlinked HTML pages and includes code written in Python and Julia at the moment.
 
 ---
@@ -14,7 +12,6 @@ Each of the HTML pages have been generated via one of three ways, forming a dist
 - **Python Implementation:** These are HTML exports of Jupyter notebooks. This would carry detailed code and comments guiding the reader through the process of simulating the system. 
 - **Julia Implementation:** These are HTML exports of Pluto notebooks (Jupyter can also be used, but Pluto is preferable due to ease of sharing the source code, and a general love towards reactivity). 
 
----
 
 ## Applying the design
 
@@ -58,7 +55,7 @@ We have thrown together a messy albeit working set of CSS code for each of the t
 
 
 
-- **Pluto notebook:** Simply copy the contents of [**DarkPluto.css**]((css-files/DarkPluto.css)) and paste into an empty cell at the top of the notebook by wrapping it like so: ``html"""css_contents_go_here"""``.  Next, install the DarkMode package from [here](https://github.com/Pocket-titan/DarkMode) or simply by doing (``Pkg.add(PackageSpec(url="https://github.com/Pocket-titan/DarkMode"))``) and run these lines in a cell.
+- **Pluto notebook:** Simply copy the contents of [**DarkPluto.css**](css-files/DarkPluto.css) and paste into an empty cell at the top of the notebook by wrapping it like so: ``html"""css_contents_go_here"""``.  Next, install the DarkMode package from [here](https://github.com/Pocket-titan/DarkMode) or simply by doing (``Pkg.add(PackageSpec(url="https://github.com/Pocket-titan/DarkMode"))``) and run these lines in a cell.
 
     ``begin 
     	import DarkMode
