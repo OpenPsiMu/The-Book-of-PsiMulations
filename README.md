@@ -57,10 +57,10 @@ We have thrown together a messy albeit working set of CSS code for each of the t
 
 - **Pluto notebook:** Simply copy the contents of [**DarkPluto.css**](css-files/DarkPluto.css) and paste into an empty cell at the top of the notebook by wrapping it like so: ``html"""css_contents_go_here"""``.  Next, install the DarkMode package from [here](https://github.com/Pocket-titan/DarkMode) or simply by doing (``Pkg.add(PackageSpec(url="https://github.com/Pocket-titan/DarkMode"))``) and run these lines in a cell.
 
-    ``begin 
-    	import DarkMode
-    	DarkMode.enable(theme="oceanic-next")
-  end``
+    ``begin`` 
+    	``import DarkMode``
+    	``DarkMode.enable(theme="oceanic-next")``
+  ``end``
 
    Refresh the page and the theme should be applied.
 
